@@ -12,6 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     package_dir={"boptest": ""},
-    packages= ["boptest." + package for package in setuptools.find_packages()],
+    packages= ["boptest"] + ["boptest." + package for package in setuptools.find_packages()],
     python_requires=">=3.6",
+    install_requires=["pandas","flask-restful", "flask_cors"]
 )
